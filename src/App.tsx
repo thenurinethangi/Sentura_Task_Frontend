@@ -46,9 +46,9 @@ const App: React.FC = () => {
     const fetchCountries = async () => {
       setLoading(true);
       setError('');
-      let url = '/api/countries';
+      let url = 'http://localhost:8080/api/countries';
       if (search.trim()) {
-        url = `/api/countries/search?name=${encodeURIComponent(search)}`;
+        url = `http://localhost:8080/api/countries/search?name=${encodeURIComponent(search)}`;
       }
       try {
         const res = await fetch(url);
